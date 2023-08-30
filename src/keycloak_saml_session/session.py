@@ -60,7 +60,7 @@ class SessionManager:
 	        "message": str(id_session)
         }
         data = json.dumps(message)
-        signature = sign_message(self.key, data)
+        signature = sign_message(self.key, "SessionMessage"+data)
         addons = "" if self.host[-1] == "/" else "/"
         
         url = self.host + addons + "/realms/"+ self.reaml\
