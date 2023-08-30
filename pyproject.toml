@@ -1,0 +1,31 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "keycloak-saml-session"
+version = "1.0.0"
+description = "Utility lib to check SAML session on Keycloak"
+readme = "README.md"
+authors = [{ name = "Bedino Tom", email = "tb@mi4.fr" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["keycloak", "saml", "session"]
+dependencies = [
+    "pyOpenSSL==23.2.0",
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/realpython/reader"
+
+[project.scripts]
+keycloak_saml_session = "keycloak_saml_session.__main__:main"
