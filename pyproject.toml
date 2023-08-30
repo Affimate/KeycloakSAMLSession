@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "keycloak-saml-session"
-version = "1.0.3"
+version = "1.0.4"
 description = "Utility lib to check SAML session on Keycloak"
 readme = "README.md"
 authors = [{ name = "Bedino Tom", email = "tb@mi4.fr" }]
@@ -26,7 +26,7 @@ requires-python = ">=3.9"
 dev = ["pip-tools", "pytest"]
 
 [project.urls]
-Homepage = "https://github.com/realpython/reader"
+Homepage = "https://github.com/Affimate/KeycloakSAMLSession"
 
 [project.scripts]
 keycloak_saml_session = "keycloak_saml_session.__main__:main"
