@@ -60,15 +60,15 @@ class SessionManager:
 	        "message": str(id_session)
         }
         data = json.dumps(message)
-        signature = sign_message(self.key, "SessionMessage"+data)
+        signature = sign_message(self.key, ("SessionMessage"+data).encode())
         addons = "" if self.host[-1] == "/" else "/"
-        
+
         url = self.host + addons + "/realms/"+ self.reaml\
             +"/saml-session-manager/" + self.reaml + "/saml/" + application
         req = request.Request(url, "POST")
         req.addHeader("saml-signature-v1", signature)
         req.addBody(data, "application/json")
-        
+
         if req.do_request():
             if req.get_json()["exists"]:
                 return SessionManager.SESSION_EXIST
