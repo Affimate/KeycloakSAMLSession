@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "keycloak-saml-session"
-version = "1.0.6"
+version = "1.0.7"
 description = "Utility lib to check SAML session on Keycloak"
 readme = "README.md"
 authors = [{ name = "Bedino Tom", email = "tb@mi4.fr" }]
