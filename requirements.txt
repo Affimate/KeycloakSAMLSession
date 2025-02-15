@@ -6,7 +6,7 @@
 #
 cffi==1.15.1
     # via cryptography
-cryptography==41.0.3
+cryptography==44.0.1
     # via pyopenssl
 pycparser==2.21
     # via cffi
